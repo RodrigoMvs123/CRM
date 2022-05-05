@@ -23,124 +23,22 @@ https://auth.cloud.datastax.com/auth/realms/CloudUsers/protocol/openid-connect/r
 To Add 
 New Project 
 React 
-
-
 Package.json
 [
 Script 
 ]
 
 1 - // To Delete 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Index JS File 
-
-
 JS File 
 To Delete 
 Line 01 // Logo 
-
-
-
-
-
-
-
-
-
-
 Function 
-
-
 Const 
-
 To Delete 
-
-
-
-
-
-
 To Delete // Header 
-
-
-
-
-
-
-
-
 To Delete 
-
 Index.Css File 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 2- // Context.js
@@ -149,45 +47,33 @@ Clone
 SRC // Source Directory 
                     New / Directory 
 JavaScript File 
-
 context.js
 import {createContext} from “react”
 const CategoryContexts = createContext ({
 categories=null,
 setCategories: () => {]
-
 })
-
 export default CategoriesDefault
-
-
 New JavaScript File 
 
+
 3 - // AvatarDisplay Component 
-
 Import blankAvatar from '../ images / blank-profile-avatar.png ' 
-
 const AvatarDisplay = ( { ticket } ) = > {
    return (
 <div> className = "avatar-container" 
 <div className = "image-conteiner">
 <image src = { ticket.avatar ? ticket.avatar: blankaAvatar  } alt = { ' photo of ' + ticket owner } />
-
 </div>
-
 </div> 
 )
 }
 export default AvatarDisplay 
-
-
 // - Image Directory 
-
-
             Components 
 New 
-
 New JavaScript File 
+
 
 4 - // DeleteBlock Component 
 import axios from ‘axios’
@@ -198,45 +84,24 @@ if (success) window.location.reload()
 const deleteticket = async () => {
 }
 return ( 
-
 <div className =”delete-block” >
 <div> className”delete-icon” onClick {deleteticket}  </div>
-
 </div>
- 
-)
+ )
 }
 export default DeleteBlock 
-
-
-
-
-
-
-
-
-
-
-
             Components 
 New 
-
 New JavaScript File 
-
-
-
             Components 
 New 
-
 New JavaScript File 
+
 
 5 - // Nav Component 
-
 import logo from ‘../import/crm-logo-png’ 
 import { useNavigate } from ‘react-router-dom
-
 const = Nav () => {
-
 const navigate = useNavigate () 
    return (
 <nav>
@@ -244,9 +109,7 @@ const navigate = useNavigate ()
 <div calssName = “controls-conteiner”> 
 <div className= “ icon ”onClick  = { () => navigate (‘/ticket’ )} >+</div>
 <div className= “ icon ”onClick  = { () => navigate (‘/ticket’ )} > << </div>
-
 <div className= ” icon ”></div>
-
 </div>
 <img src ( logo ) alt = “logo”/> 
 </nav>
@@ -255,12 +118,7 @@ const navigate = useNavigate ()
 export default Nav.js
 
  
-
-
-
-
 6 - // PriorityDisplay Component 
-
 const PriorityDisplay = ( { priority } ) = > {
    return (
 <div className=”priority-display”>
@@ -270,24 +128,17 @@ const PriorityDisplay = ( { priority } ) = > {
 <h3 style={{ color: priority }  }> =3 ? ‘rgb(253, 253, 150)’ : ‘ ‘ } } >☆<h3/>
 <h3 style={{ color: priority }  }> =4 ? ‘rgb(253, 253, 150)’ : ‘ ‘ } } >☆<h3/>
 <h3 style={{ color: priority }  }> =5 ? ‘rgb(253, 253, 150)’ : ‘ ‘ } } >☆<h3/>
-
 </div>
 </div> 
-
 )
 }
-
 export default PriorityDisplay
-
-
-
 Components 
 New 
-
 New JavaScript File 
             
-7 - // ProgressDisplay Component 
 
+7 - // ProgressDisplay Component 
 const ProgressDisplay = ( { progress } ) = > {
    return (
 <div className=”progress-display”>
@@ -296,23 +147,18 @@ const ProgressDisplay = ( { progress } ) = > {
 style={{ witdh:progress + ‘%’ }}
 className=”progressindicator”
 </div>
-
 </div> 
 </div>
 )
 }
 export default ProgressDisplay 
-
-
             Components 
 New 
-
 New JavaScript File 
 
+
 8 - // StatusDisplay Component 
-
-const StatusDisplay  = ( { status  } ) =>  {
-
+  const StatusDisplay  = ( { status  } ) =>  {
 const getColor = ( status ) = > 
 let color
 switch = ( status ) {
@@ -328,53 +174,39 @@ break
 default: 
 color: ‘ rgb ( 186, 255, 255 )’ 
 }
-
 return color 
-
-}
-
+  }
 return ( 
 <div>className=”status-display” style= {{ backgroundcolor: getColor(status)}} 
 { status }
 <div/>
 )
 } 
-
 Components 
 New 
-
 New JavaScript File 
 
+
 9 - // TicketCardjs. Component 
-
 import { Link } from ‘react-from-dom’ 
-
 import AvatarDisplay from “/.AvatarDisplay”
 import StatusDisplay from “/.StatusDisplay”
 import PriorityDisplay from “/.PriorityDisplay”
 import ProgressDisplay from “/.ProgressDisplay” 
 import DeleteBlock from “/.DeleteBlock”  
-
 const TicketCard = ( { color, filteredTicket } ) = > {
    return (
-
 <div className = “ticket-card”>
-
 <link to={'/ticket/${ticket.documentId' } }
 id = " link " >   
- 
-<div> className= “ ticket color ” style= {{backgroundColor: color}}> </div>
-
+ <div> className= “ ticket color ” style= {{backgroundColor: color}}> </div>
 <h3>filteredTicket.title</h3>
 <AvatarDisplay ticket={ticket}/>
 <StatusDisplay status:{ticket.status}/>
 <PriorityDisplay priority={ticket.priority}/>
 <ProgressDisplay priority=”ticket.progress”/>
  <link/>
-
-
 <DeleteBlock documentId = {ticket documentId}/>
-
 </div> 
 )
 }
@@ -382,63 +214,41 @@ id = " link " >
 
 
 export default TicketCard.js 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Pages 
 New 
 New JavaScript File 
 
+  
 10 - // Dashboard Component 
-
 const Dashboard = ( ) {
    return (
 <div>Dashboard</div> 
 )
 }
 export default Dashboard  
-
-
 Pages 
 New 
-
 New JavaScript File 
-            
+
+  
 11 - // TicketPage Component 
 
 import { use State, useContex, useEffect } from ‘react’
 import {useNavigate, useParams} from ‘react-router ’
 import axios from ‘axios’
 import CategoriesContex from ‘../context’
- 
-const TicketPage = ({editMode} ) = > {
-
+ const TicketPage = ({editMode} ) = > {
 const {fromData, setFormData = useState (
-
 status: ‘not started’ ,
 progress: 0;
 category: categories[0],
 timestamp: new: new Date (). toISOString () 
 ) }
-
 const {categories, setCategories} = useContex (CategoriesContex) 
 const navigate = useNavigate () 
 let { id } = useParams ()
 const handleSubmit = sync (e) = > {
 e.preventDefault () 
-
 if (editMode) {
 const response = await axios.put(‘http://localhost:8000/tickets/${id}’ {
 data:formData
@@ -448,7 +258,6 @@ if (success)
 navigate {‘/’}
 }
 }
-
 if ( !editmode ) {
 const response = await axios.post (‘https://localhost:8000/tickets’,
 {  
@@ -460,28 +269,22 @@ navigate {‘/’}
 }
 }
 }
-
 const fetchData = () => async {
 const response = await axios.get(‘http://localhost:8000/tickets/${id}’)
 setFormData(response.data.data)
 }
-
 use effect (()) => {
 if (editMode) fetchData()
 }, [])
-
 const handleChange = () = > {
 const value = e.target.value
 const name = e.target.name
-
 setFormData ((prevState) = > ({
 …prevState,
 [name]: value
 })
 )
 }
-
-
 { editMode && 
 <> 
 <input 
@@ -494,7 +297,6 @@ setFormData ((prevState) = > ({
    onChange={handleChange}
 />
 <label htmlFor=”progress” >Progress</label>
-
 <label>Status</label>
 <select
 name=”status”
@@ -510,7 +312,6 @@ onChange={habdleChange}
 }
 <input type=”submit”/>
 </section>
-
 <section>
 <label htmlFor =”owner”=Owner></label>
 <input
@@ -521,7 +322,6 @@ onChange={handleChange}
 required={true}
 value={form.Data.owner}
 />
-
 <label htmlFor =”avatar”=Avatar></label>
 <input
 id=”avatar”
@@ -531,29 +331,23 @@ onChange={handleChange}
 required={true}
 value={form.Data.avatar}
 />
-
 <div class name=”img-preview”>
 {formData.avatar && )
-
 <img src= {form.Data.avatar} alt= “img-preview”/>
-
 )}
 </div>
-
 </section>
 </form>
 </div>
 </div>
 )
 }
-
 console.log (formData) 
 return (
 <div className “ticket”>
 <h1> { editMode ? ‘ Update your Ticket’ : Create a Ticket } </h1>
 </div> 
 <div className=”ticket-conteiner”> 
-
 <form onSubmit={handleSubmit}>
 <section> 
 <label htmlFor=”title”>Title</label> 
@@ -565,7 +359,6 @@ onChange={handleChange}
 required={true}
 value={form.Data.title}
 />
-
 <label htmlFor=”description”>Description</label> 
 <input
 id=”description”
@@ -575,8 +368,6 @@ onChange={handleChange}
 required={true}
 value={form.Data.description}
 />
-
-
 <label>Category</label>
 <select
 name=”category”
@@ -607,7 +398,6 @@ value={1}
 checked={formData.priority ===1 }
 />
 label htmlFor=”priority-1”>1</label>
-
 <label>Priority</label>
 <label htmlFor=”priority-1”>1</label>
 <div className=”multiple-input-container”>
@@ -619,7 +409,6 @@ onChange= {handleChange}
 value={2}
 checked={formData.priority ===2 }
 />
-
 <label>Priority</label>
 <label htmlFor=”priority-2”>2</label>
 <div className=”multiple-input-container”>
@@ -631,7 +420,6 @@ onChange= {handleChange}
 value={1}
 checked={formData.priority === }
 />
-
 <label>Priority</label>
 <label htmlFor=”priority-3”>3</label>
 <div className=”multiple-input-container”>
@@ -655,125 +443,47 @@ value={5}
 checked={formData.priority ===5 }
 />
 <label htmlFor=”priority-5”>5</label>
-
-
-
 </div>
-
-
-
 export default TicketPage 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Pages 
 New 
-
 New JavaScript File 
-            
-12 - // Appjs. 
 
+  
+12 - // Appjs. 
 Terminal 
 npm i react - router - dom 
-
-
-
-
 // App.js 
-
-
-
 import { BrowserRouter, Route, Routes } from ‘ react - router - dom ’ // package.json
-
 const Class Name = ( ) {
    return (
 <div>App</div> 
 )
 }
 export default App
-
 //
  SoftWare Version 
- 
-package.json
-
+ package.json
 “ react - router - dom ”: “ 6.2.2 ”,  
-
-\\ 
-
-\\
-
 “ react - router - dom  ”: “ 6.2.1 ”, 
-
-
 Terminal 
 To Change SoftWare Version 
-
 npm i 
-// 
 
+  
 13 - //App.js
-
 import { BrowserRouter, Route, Routes } from ‘ react - router - dom ’ // package.json
 import { useState } from ‘react’
 import Nav from ‘ ./ components / Nav ’
 import Dashboard from ‘ ./ pages/Dashboard ’ 
 import TicketPage from ‘ ./ pages/TicketPage ’
 import CategoriesContext from ‘../context’
-
 const app => ( ) {
 const [categories, setCategories] = useState(null)   
 const value = { categories, setCategories } 
-
 return (
-
 < div class Name = “ app ” > 
 <CategoriesContext,Provider value = {value}>
-
 <BrowserRouter>   
    <Nav/> 
    <Routes>
@@ -783,41 +493,24 @@ return (
    </Routes> 
 </BrowserRouter>
 </CategoriesContext,Provider>
-
 </div> 
 )
 }
 export default App
-
-
 }
 
 
-
-
-
-
-
-
-
 14 - // Dashboard.JS Categories 
-
 import {useState, useEffect, useContex } from ‘react’ 
 import Ticket Card from ‘ ../ components/TicketCard ’
 import axios from ‘axios’ 
 import CategoriesContext from ‘../context’ 
-
 const Dashboard = ( ) 
 const {tickets, setTickets } = useState ( null ) 
 const { categories, setCategories } = useContex (categoriesContex) 
-
-
 useEffect (async () = > {
-
 const response = await axios.get(‘http://localhosto:8000/tickets’) 
-
 const dataObject response.data.data
-
 const arreysOfkeys = object.keys(dataObject)  
 const arreyOfdata = object.keys(dataObject) map(key)=>dataObject[key])
 const formattedArray = []
@@ -828,14 +521,10 @@ formattedArray.push (formattedData)
 })  
 setTickets(formattedArray) 
 }, [])
-
 useEffect (() => ) {
 setCategories ([...new Set (tickets?.map ({category}) =>cayegory)])
 }, [tickets] )
-
 console.log(categories)
-
- //   
 const tickets = [
 {
 category: ‘ Q1 2022 ’,
@@ -849,7 +538,6 @@ progress: ‘ 40 ’,
 description: ‘ Make a video showcase how to work with NFTs safety, including how to know if one is not genuine ’,
 timestamp: ‘ 2022 - 02 - 11T07:36:17+0000 ’
 },
-
 {
 category: ‘ Q1 2022 ’,
 color: ‘red’,
@@ -861,7 +549,6 @@ priority: ‘ 2 ’,
 progress: ‘ 70 ’,
 description: ‘ Make a video about AI ’,
 timestamp: ‘ 2022 - 02 - 13T07:36:17+0000 ’
-
 category: ‘ Q2 2022 ’,
 color: ‘blue’,
 title: ‘ Biuld a bot’  
@@ -872,29 +559,18 @@ priority: ‘ 3 ’,
 progress: ‘ 10 ’,
 description: ‘ Make a video showcase how to work with NFTs safety, including how to know if one is not genuine ’,
 timestamp: ‘ 2022 - 02 - 11T07:36:17+0000 ’
-
-
-
 }
- 
 ]
-
 const colors = [ 
 ‘rgb(255,179,186)’,
 ‘rgb(255,233,186)’,
 ‘rgb’(255,255,186),
 ‘rgb(186,255,201)’,
 ‘rgb(186,255,255)’,
-
-
 ]
-//
 const uniqueCategories = [ 
-
 ...new Set(tickects?.map(({category}) => category))) 
-
 ]
-
 return (
 <div className = “ dashboard ”>
 <h1>My Projects</h1>
@@ -910,45 +586,18 @@ color={colors[categoryindex] || colors[0]}
 ticket={filteredTickect}
 />
 ))
-
 }
-
 <div/>
-
 ) )
-
 }
-
 </div>
 export default Dashboard  
-
-
-
-
-
-
-
-
-
-
-
-
 // inspect 
-
-
-
-
-
-
-
-
 Pages 
 New 
 New JavaScript File 
 
-
-
-
+  
 15 - // Index.css
 
 html, body {
@@ -956,20 +605,14 @@ margin: 0;
 padding: 0;
 font - family: ‘ Trebuchet MS ’, Arial, sans - serif; 
 } 
-
 .app {
 display: flex; 
 }
-
 # link{
 text-decoration: none;
 color: rgb (46, 46, 46);
-
 }
-
-
 /*----- Nav —--*/ 
-
 nav {
 height: 100vh;
 background-color: rgb ( 43, 43, 63 );
@@ -979,60 +622,36 @@ display: flex;
 flex-direction: column; 
 justify-content: space-between;   
 }
-
-
-
 nav .logo-conteiner,
 nav controls-conteiner { 
 padding: 40px 25px;
 display: flex;
 flex-direction: column;
-
 }
-
-
-
 nav .logo-conteiner,
 width 20px; 
 }
-
 nav .icon {
 color: rgb ( 255, 255, 255 );
 }
-
-
-
-
-
 /*----- Dashboard —--*/
-
 .dashboard {
 padding: 30px;
 width: 100%;
-
 }
-
 .dashoboard ticket-cointainer { 
 height: 80vh;
 overflow: scroll;
 }
-
 /*----- TicketCard —--*/
 .Ticket-card {
 display: flex;
 width: 100%;
-
 }
-
-
 .ticket-card # {
 display: flex;
 width: 100%;
-
-
 }
-
-
 .ticket-card # > ☆ {
 background-color = rgb (211,211,211);
 margin: 2px;
@@ -1041,73 +660,43 @@ width 100%;
 display: flex;
 align-items: center;
 }
-
-
-
-
 .ticket-card .ticket-color { 
 width: 15px !important ;
 Padding: 10px !important; 
 margin: 2px;
-
-
-
-
 } 
-
 .ticket-card .avatar-container {
 display: flex;
-
 justify-content: center;
 width: 80px;
-
 }
-
 .ticket-card .img-container {
 height: 50px;
 width: 50px;
 border-radius: 25px;
 overflow: hidden;
-
-
 .ticket-card .img-container img {
 width: 100px;
 }
- 
-}
-
+ }
 .ticket-card .status-display {
 display: flex;
 justify-content: center;
-
-
 }
-
-
 .ticket-card .priority-display {
 display: flex;
 justify-content: center;
-
-
 }
-
-
 .ticket-card .priority-display .star-container {
 display: flex;
-
 }
-
 .ticket-card .priority-display .star-container h3 {
 margin: 7px;
 padding: 0px;
-
 }
-
 .ticket-card .progress-display {
 min-width: 200px;
-
 }
-
 .ticket-card .progress-bar {
 width: 100%;
 height: 30px;
@@ -1115,17 +704,10 @@ background-color: rgb(158, 158, 158 );
 border-radious: 15px;
 overflow: hidden;
 }
-
-
-
 .ticket-card .progress-bar .progress-indicator {
-
 background-color: rgb( 104, 104, 175);
 height: 100%;
- 
-}
-
-
+ }
 .ticket-card .delete-block {
 background-color: rgb (211, 211, 211);
 width: 50px;
@@ -1134,7 +716,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 .ticket-card .delete-block.delete-icon {
 width: 2opx;
 height: 20px;
@@ -1144,17 +725,11 @@ display: flex;
 justify-content: center;
 align-items: center; 
 color: rgb (255, 255, 255) 
-
 }
-
-
-
 /*—- Ticket Page —-- */
-
 .ticket {
 padding; 30px;
 width:100px;
-
 }
 
 .ticket .ticket-container {
