@@ -731,33 +731,23 @@ color: rgb (255, 255, 255)
 padding; 30px;
 width:100px;
 }
-
 .ticket .ticket-container {
 width: 100%;
 display: flex;
 justify-content: center;
 }  
-
 .ticket form {
 display: flex;
-
 }
-
 .ticket form section {
 display: flex;
 flex-direction: column 
 margin:10px;
 width: 500px;
-
 }
-
-
-
 .ticket form label {
 margin: 20px o o o;
-
 }
-
 .ticket form select 
 .ticket form input {
 padding 10px;
@@ -765,22 +755,10 @@ font-size: 15px;
 border-radius: 10px;
 border: 1.5px solid rgb 9 (218,218,218);
 margin: 5px; 
-
 }
-
-
-
-
-
-
-
-
 .ticket form .multiple-input-container {
-
 margin: 20px 20 px 0;
-
 } 
-
 Project
 Monday-clone 
 SRC 
@@ -788,56 +766,34 @@ README.md
 New
 JavaScript File 
 server.js
-
 Terminal: monday-clone % npm i express cors axios dotenv
 monday-clone % npm i nodemon
-
 Project
 Monday-clone 
 SRC 
 package.json 
-
-
 npm i nodemon - - save-dev 
-
-
 to change line 11:
-
-
-
 To change line 20 and 21: 
-
-
-
-
-
-
-
 Project
 Monday-clone 
 SRC 
 package.json 
-
 Terminal: % npm run start: backend
 
 
-
-
 16 - // server.js
-
 const PORT = 8000
 const express = require (‘express’)
 const cors =  require (‘cors’)’
 require (‘dotenv’). config () 
 const axios = require (‘axios’)
 const app = express ()
-
 app.use(cors())
 app.use (express.json () ) 
 const url = process.env.URL
 const token = process.env.ASTRA_TOKEN
 app.get(‘/tickets’, async ( res, res ) => {
-
 const options = {
 method ‘GET’,
 headers: {
@@ -851,45 +807,33 @@ rest.status(200).json(response.data)
 } catch ( err ) {
 console.log ( err) 
 res.status ( 500 ).json({message:err})
-
 }
 })
-
-
 app.get(‘/tickets/:documentId’, async ( req,res ) => ) {
 const id = req.params.documentId
-
 const options = {
 method: ‘GET’, 
 headers:{
 accepts: ‘application.json’,
 ‘X-Cassandra-Token: token’, 
 }
-
 }
-
 try {
 const response = await axios (‘${url}/${id}’), options 
 res.status(200).json(response,data) 
-
 } catch (err) {
 console.log ( err) 
 res.status ( 500 ).json({message:err})
 }
-
 })
-
-
 app.post(‘/tickets’ , async ( req, res ) = > {
 const formData = req.form.body.formData 
-
 const options - {
 method ‘POST’,
 headers: {
 accepts: ‘applications/json’,
 ‘X-Cassandra-Token’: token, 
 ‘Content-Type’: ‘application.json’,
-
 },
 data: formData
 }
@@ -900,10 +844,7 @@ res.status(200).json(response.data)
 console.log ( err) 
 res.status ( 500 ).json({message:err})
 }
-
 })
-
-
 app.put(‘/tickets/:documentId’, async ( req,res ) => ) {
 const id = req.params.documentId
 const data = req.body.data
@@ -915,19 +856,14 @@ accepts: ‘application.json’,
 },
 data 
 }
-
 try {
 const response = await axios (‘${url}/${id}’), options 
 res.status(200).json(response,data) 
-
 } catch (err) {
 console.log ( err) 
 res.status ( 500 ).json({message:err})
 }
-
 })
-
-
 app.delete(‘/tickets/:documentId’, async(req, res)=>{
 const id = req.params.documentId
 const options ={
@@ -936,107 +872,24 @@ headers: {
 accepts: ‘applications/json’,
 ‘X-Cassandra-Token’ : token 
 }
-
 }
-
 try {
 const response = await axios (‘${url}/${id}’), options 
 res.status(200).json(response,data) 
-
 } catch (err) {
 console.log ( err) 
 res.status ( 500 ).json({message:err})
 }
-
 }
 }) 
-
 app.listen ( PORT, () = > console.log (‘server running on PORT’ + PORT ) )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 to add an new task
-
-to add an new task
-
-
-
-
-
-
-
-
-
-
-
-
-
 server.js 
 New
 JavaScript File 
 
 
-
-
 17 // dummydate.js
-
  //   
 const tickets = [
 {
@@ -1051,7 +904,6 @@ progress: ‘ 40 ’,
 description: ‘ Make a video showcase how to work with NFTs safety, including how to know if one is not genuine ’,
 timestamp: ‘ 2022 - 02 - 11T07:36:17+0000 ’
 },
-
 {
 category: ‘ Q1 2022 ’,
 color: ‘red’,
@@ -1063,7 +915,6 @@ priority: ‘ 2 ’,
 progress: ‘ 70 ’,
 description: ‘ Make a video about AI ’,
 timestamp: ‘ 2022 - 02 - 13T07:36:17+0000 ’
-
 category: ‘ Q2 2022 ’,
 color: ‘blue’,
 title: ‘ Biuld a bot’  
@@ -1074,12 +925,8 @@ priority: ‘ 3 ’,
 progress: ‘ 10 ’,
 description: ‘ Make a video showcase how to work with NFTs safety, including how to know if one is not genuine ’,
 timestamp: ‘ 2022 - 02 - 11T07:36:17+0000 ’
-
-
-
 }
  ]
-
 const colors = [ 
 ‘rgb(255,179,186)’,
 ‘rgb(255,233,186)’,
@@ -1087,18 +934,10 @@ const colors = [
 ‘rgb(186,255,201)’,
 ‘rgb(186,255,255)’,
 ]
-
-
-
 //
 
 
-
-
-
-
 18 - // .env
-
 URL = http://…// tickets / collections 
 ASTRA_TOKEN = Astra CS:...//DBToken 
 
