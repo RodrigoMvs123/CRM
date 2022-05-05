@@ -4,6 +4,8 @@ Clone
 Final Code 
 https://github.com/kubowania/monday-crm-clone 
 
+https://raw.githubusercontent.com/RodrigoMvs123/CRM/main/README.md
+
 
 
 R:  Microsoft Original Documentation 
@@ -18,6 +20,9 @@ To Build a CRM Clone with “GET”, “POST”, “PUT”, “DELETE”, Reques
 Final Code: https://github.com/kubowania/monday-crm-clone 
 
 https://auth.cloud.datastax.com/auth/realms/CloudUsers/protocol/openid-connect/registrations?client_id=auth-proxy&response_type=code&scope=openid+profile+email&redirect_uri=https://astra.datastax.com/welcome&utm_source=youtube&utm_medium=referral&utm_campaign=ania-kubow&utm_term=frontend-devplay&utm_content=monday-crm-clone 
+
+
+
 
 
 To Add 
